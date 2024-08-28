@@ -2,23 +2,23 @@
 
 getMachineDefaults(){
 route "${cyellow}>> getMachineDefaults${cnormal}"
-  comment "   init lmod functionality"
-  . /p/software/jurecadc/lmod/lmod/init/ksh >> $log_file 2>> $err_file
-  check
-  comment "   source and load Modules on JURECA"
-  . $rootdir/bldsva/machines/loadenvs.$compiler >> $log_file 2>> $err_file
-  check
+  #comment "   init lmod functionality"
+  #. /p/software/jurecadc/lmod/lmod/init/ksh >> $log_file 2>> $err_file
+  #check
+  #comment "   source and load Modules on JURECA"
+  #. $rootdir/bldsva/machines/loadenvs.$compiler >> $log_file 2>> $err_file
+  #check
 
 
   defaultMpiPath="$EBROOTPSMPI"
   defaultNcdfPath="$EBROOTNETCDFMINFORTRAN"
-  if [[ $compiler == "Gnu" ]] ; then
-    defaultGrib1Path="/p/project/cslts/local/jureca/DWD-libgrib1_20110128_Gnu/lib/"
-  elif [[ $compiler == "Intel" ]] ; then
-    defaultGrib1Path="/p/project/cslts/local/jureca/DWD-libgrib1_20110128_Intel/lib/"
-  else
-    defaultGrib1Path="/p/project/cslts/local/jureca/DWD-libgrib1_20110128_Intel/lib/"
-  fi
+  #if [[ $compiler == "Gnu" ]] ; then
+  #  defaultGrib1Path="/p/project/cslts/local/jureca/DWD-libgrib1_20110128_Gnu/lib/"
+  #elif [[ $compiler == "Intel" ]] ; then
+  #  defaultGrib1Path="/p/project/cslts/local/jureca/DWD-libgrib1_20110128_Intel/lib/"
+  #else
+  #  defaultGrib1Path="/p/project/cslts/local/jureca/DWD-libgrib1_20110128_Intel/lib/"
+  #fi
   defaultGribPath="$EBROOTECCODES"
   defaultGribapiPath="$EBROOTECCODES"
   defaultJasperPath="$EBROOTJASPER"
@@ -250,7 +250,7 @@ check
 comment "   change permission of runscript and mapfile"
 chmod 755 $rundir/tsmp_slm_run.bsh >> $log_file 2>> $err_file
 check
-chmod 755 $rundir/slm_multiprog_mapping.conf >> $log_file 2>> $err_file
+chmod 644 $rundir/slm_multiprog_mapping.conf >> $log_file 2>> $err_file
 check
 route "${cyellow}<< createRunscript${cnormal}"
 }

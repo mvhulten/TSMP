@@ -5,7 +5,7 @@
 ######################################################
 
 getDefaults(){
-  def_platform="" 
+  def_platform="MARVIN"
   def_version="" 
   def_combination=""
   def_rootdir="$estdir" #This should be correct - change with caution
