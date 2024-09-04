@@ -5,7 +5,7 @@
 ######################################################
 
 getDefaults(){
-  def_platform="" 
+  def_platform="MARVIN"
   def_version="" 
   def_combination=""
   def_rootdir="$estdir" #This should be correct - change with caution
@@ -19,7 +19,7 @@ getDefaults(){
 #DA
   def_dadir=""
   # pathes will be set to tested platform defaults if empty
-  def_mpiPath=""
+  def_mpiPath="/opt/software/easybuild-INTEL/software/OpenMPI/4.1.5-GCC-12.3.0"
   def_ncdfPath=""
   def_grib1path=""
   def_gribPath=""

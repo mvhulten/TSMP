@@ -50,8 +50,8 @@ echo $((processes%resources?processes/resources+1:processes/resources))
 
 createRunscript(){
 route "${cyellow}>> createRunscript${cnormal}"
-comment "   copy JURECA module load script into rundirectory"
-  cp $rootdir/bldsva/machines/loadenvs.$compiler $rundir/loadenvs
+comment "   copy MARVIN module load script into rundirectory"
+  cp $rootdir/bldsva/machines/loadenvs_MARVIN.$compiler $rundir/loadenvs
 check
 
 mpitasks=$((numInst * ($nproc_icon + $nproc_cos + $nproc_clm + $nproc_pfl + $nproc_oas)))

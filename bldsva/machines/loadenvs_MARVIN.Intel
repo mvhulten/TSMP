@@ -1,0 +1,18 @@
+module --force purge
+module load intel-compilers/2023.2.1
+module load OpenMPI/4.1.5-GCC-12.3.0
+#
+module load Hypre/2.29.0-foss-2023a
+module load Tcl/8.6.13-GCCcore-12.3.0 
+#
+module load ecCodes/2.31.0-gompi-2023a
+module load HDF5/1.14.0-gompi-2023a
+module load netCDF/4.9.2-gompi-2023a
+module load netCDF-Fortran/4.6.1-gompi-2023a
+module load CMake/3.26.3-GCCcore-12.3.0
+
+# Modules for CLM5
+module load imkl
+module load netCDF-C++4/4.3.1-gompi-2023a
+
+module li
